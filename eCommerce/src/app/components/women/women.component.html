@@ -1,0 +1,60 @@
+<div class="sidenav">
+  <a href="#Sarees">Sarees</a>
+  <a href="#Tops">Tops</a>
+  <a href="#Kurties">Kurties</a>
+  <a href="#Dresses">Dresses</a>
+</div>
+<div class="main">
+ <div class="form-group">
+  <div class="col-md-6" >
+    <input type="text" [(ngModel)]="searchText" 
+           class="form-control" placeholder="Search By Description" />
+  </div>
+ </div>
+ <br/>
+ <br/>
+ <div class="container">
+    <div class="row">
+     <div class="col-md-12" >
+      <div class="col-md-3 borderClass" *ngFor="let saree of SareeObject | filter : searchText" >
+       <img class="ImageClass" [src]="saree.imgageOne" />
+       <h4 class="hClass">{{saree.description}}</h4>
+       <span class="PriceClass">{{saree.price}}</span>
+       <a data-toggle="modal" data-target="#myModal" (click)="ModalFunctin(saree)" style="margin-left:10px; font-size:14px;">Add to card</a>
+      </div>
+     </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add to card</h4>
+        </div>
+        <div class="modal-body">
+           <img class="ImageClass" [src]="ImageInfo.imgageOne" />
+            <h4 class="hClass">{{ImageInfo.description}}</h4>
+           <span class="PriceClass">{{ImageInfo.price}}</span>
+           <br/>
+           <a href="#MoreinfoId" class="infoClass" data-toggle="collapse">More Information </a>
+           <p id="MoreinfoId" class="collapse collapseClass">
+			   {{ImageInfo.moreinfo}}
+		   </p>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary OrderClass">Order</button>
+          <button type="button" class="btn btn-default closeClass" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>

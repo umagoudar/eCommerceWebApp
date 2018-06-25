@@ -1,0 +1,60 @@
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color:#9e9e9e61;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 18px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    
+}
+.hClass{
+    padding-top:10px;
+}
+.PriceClass{
+    color:red;
+}
+.borderClass{
+    border:1px solid lightgrey;
+}
+.ImageClass{
+    padding-top:10px;
+}
+.OrderClass{
+    margin-left: 63%;
+    background-color:#232f3e; 
+    border-radius: 0px;
+}
+.closeClass{
+    border-radius: 0px;
+}
+.infoClass{
+    font-size: 12px;
+}
+.collapseClass{
+    font-size: 15px;
+}

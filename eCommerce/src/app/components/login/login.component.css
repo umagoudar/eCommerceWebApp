@@ -1,0 +1,19 @@
+.divClass {
+    border-radius: 5px;
+    border-style: ridge;
+    padding: 13px;
+     box-shadow: 10px 10px 5px #888888;
+}
+.btnClass{
+	width: 100%;
+	border-radius: 0px;
+	 height: 44px;
+}
+.checkboxClass{
+	float:right; 
+	text-decoration:none;
+}
+.passwordClass{
+	border-radius: 0px; 
+	height: 44px;
+}
